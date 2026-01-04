@@ -1,5 +1,5 @@
 
-# HIIT up2156925
+# HIIT Web Project
 ## Key features
 
 ### Key Feature Name/Description.
