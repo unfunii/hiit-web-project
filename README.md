@@ -31,7 +31,6 @@ The design of your HIIT workout app is strategically tailored to enhance user en
 
 
 ## AI
-REMOVE ME: Detail your use of AI, listing of the prompts you used, and whether the results formed or inspired part of your final submission and where we can see this (and if not, why not?). You may wish to group prompts into headings/sections - use markdown in any way that it helps you communicate your use of AI. 
 
 ### Prompts to develop Targeted Exercise Lists
 A sequence of prompts helped me develop the feature for compiling a list of exercises for different body 
