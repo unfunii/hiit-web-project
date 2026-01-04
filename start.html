@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/next-art" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">HIIT</div>
+        <div class="buttons">
+            <button id="homeButton" class="btn">Home</button>
+            <button id="startButton" class="btn" >Start</button>
+            <button id="createButton" class="btn">Create</button>
+        </div>
+    </nav>
+
+    <section class="create-container">
+        <div>
+            <h1>Choose your workout</h1>
+            <div class="container">
+                <!-- ARMS -->
+                <div id="arms-ex" class="card" onclick="openPopup('arms-popup')">
+                    <div class="description">
+                        <h4>ARMS</h4>
+                        <p class="text-hidden">
+                            5 exercises<br>
+                            5 minutes
+                        </p>
+                    </div>
+                    <img src="images/girl.jpg" alt="girl">
+                </div>
+                <div class="popup" id="arms-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('arms-popup')">&times;</span>
+                        <div class="countdown">
+                            <p id="armsTimerText">00:00</p>
+                            <button id="armsStartStopButton" class="startStopButton">Start</button>
+                            <button id="armsRestartButton" class="restartButton">Restart</button>
+                        </div>
+                        <h1>Arms Exercises</h1>
+                        <div class="ex-names">
+                            <li>Holds</li>
+                            <li>Circles forward</li>
+                            <li>Circles reverse</li>
+                            <li>Plates in & out</li>
+                            <li>Flight attendant (one arm)</li>
+                        </div>
+                        <div id="armsExercises" class="armsExercises">
+                            <div class="armsExercise">
+                                <h2>Hold</h2>
+                                <p class="ex-description">Hold your arms in a static position.</p>
+                            </div>
+                            <div class="armsExercise">
+                                <h2>Circles forward</h2>
+                                <p class="ex-description">Make circles with your arms moving forward.</p>
+                            </div>
+                            <div class="armsExercise">
+                                <h2>Circles reverse</h2>
+                                <p class="ex-description">Make circles with your arms moving backward.</p>
+                            </div>
+                            <div class="armsExercise">
+                                <h2>Plates in & out</h2>
+                                <p class="ex-description">Hold imaginary plates and move them closer and farther from your body.</p>
+                            </div>
+                            <div class="armsExercise">
+                                <h2>Flight attendant (one arm)</h2>
+                                <p class="ex-description">Extend one arm as if serving something to someone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEGS -->
+                <div id="legs-ex" class="card" onclick="openPopup('legs-popup')">
+                    <div class="description">
+                        <h4>LEGS</h4>
+                        <p class="text-hidden">
+                            6 exercises<br>
+                            6 minutes
+                        </p>
+                    </div>
+                    <img src="images/girl.jpg" alt="girl">
+                </div>
+                <div class="popup" id="legs-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('legs-popup')">&times;</span>
+                        <div class="countdown">
+                            <p id="legsTimerText">00:00</p>
+                            <button id="legsStartStopButton" class="startStopButton">Start</button>
+                            <button id="legsRestartButton" class="restartButton">Restart</button>
+                        </div>
+                        <h1>Legs Exercises</h1>
+                        <div class="ex-names">
+                            <li>Bodyweight Squats</li>
+                            <li>Walking Lunges</li>
+                            <li>High Knees</li>
+                            <li>Jump Squats</li>
+                            <li>Calf Raises</Li>
+                            <li>Skaters</li>
+                        </div>
+                        <div id="legsExercises" class="legsExercises">
+                            <div class="legsExercise">
+                                <h2>Bodyweight Squats</h2>
+                                <p class="ex-description">
+                                    Stand with feet shoulder-width apart. 
+                                    Bend your knees and lower your body like sitting in a chair, 
+                                    then stand back up.  
+                                </p>
+                            </div>
+                            <div class="legsExercise">
+                                <h2>Walking Lunges</h2>
+                                <p class="ex-description">Take a big step forward, 
+                                    lower your body until both knees are bent, 
+                                    then step back to standing. Repeat with the other leg.</p>
+                            </div>
+                            <div class="legsExercise">
+                                <h2>High Knees</h2>
+                                <p class="ex-description">Jog in place, 
+                                    lifting your knees up high with each step.</p>
+                            </div>
+                            <div class="legsExercise">
+                                <h2>Jump Squats</h2>
+                                <p class="ex-description"> Squat down, then jump up as high as you can. 
+                                    Land softly and repeat</p>
+                            </div>
+                            <div class="legsExercise">
+                                <h2>Calf Raises</h2>
+                                <p class="ex-description">Rise up onto your tiptoes, then lower back down.</p>
+                            </div>
+                            <div class="legsExercise">
+                                <h2>Skaters</h2>
+                                <p class="ex-description">Jump sideways to one side, 
+                                    landing on one foot and swinging the other behind you. 
+                                    Repeat, alternating sides.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHEST -->
+                <div id="chest-ex" class="card" onclick="openPopup('chest-popup')">
+                    <div class="description">
+                        <h4>CHEST</h4>
+                        <p class="text-hidden">
+                            4 exercises<br>
+                            4 minutes
+                        </p>
+                    </div>
+                    <img src="images/girl.jpg" alt="girl">
+                </div>
+                <div class="popup" id="chest-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('chest-popup')">&times;</span>
+                        <div class="countdown">
+                            <p id="chestTimerText">00:00</p>
+                            <button id="chestStartStopButton" class="startStopButton">Start</button>
+                            <button id="chestRestartButton" class="restartButton">Restart</button>
+                        </div>
+                        <h1>Chest Exercises</h1>
+                        <div class="ex-names">
+                            <li>Push-Ups</li>
+                            <li>Wide Arm Push-Ups</li>
+                            <li>Diamond Push-Ups</li>
+                            <li>Wall Push-Ups</li>
+                        </div>
+                        <div id="chestExercises" class="chestExercises">
+                            <div class="chestExercise">
+                                <h2>Push-Ups</h2>
+                                <p class="ex-description">
+                                    Start in a plank position with hands shoulder-width apart, 
+                                    lower your body until chest nearly touches the floor, then push back up.
+                                </p>
+                            </div>
+                            <div class="chestExercise">
+                                <h2>Wide Arm Push-Ups</h2>
+                                <p class="ex-description">Similar to regular push-ups but with hands placed wider than shoulder-width apart, targeting the outer chest muscles.</p>
+                            </div>
+                            <div class="chestExercise">
+                                <h2>Diamond Push-Ups</h2>
+                                <p class="ex-description">Place hands close together under your chest in a diamond shape, 
+                                    lower your body until chest nearly touches your hands, then push back up.</p>
+                            </div>
+                            <div class="chestExercise">
+                                <h2>Wall Push-Ups</h2>
+                                <p class="ex-description"> Stand facing a wall, place your hands on the wall at shoulder height, 
+                                    then lean forward and push away from the wall.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CORE -->
+                <div id="core-ex" class="card" onclick="openPopup('core-popup')">
+                    <div class="description">
+                        <h4>CORE</h4>
+                        <p class="text-hidden">
+                            5 exercises<br>
+                            5 minutes
+                        </p>
+                    </div>
+                    <img src="images/girl.jpg" alt="girl">
+                </div>
+                <div class="popup" id="core-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('core-popup')">&times;</span>
+                        <div class="countdown">
+                            <p id="coreTimerText">00:00</p>
+                            <button id="coreStartStopButton" class="startStopButton">Start</button>
+                            <button id="coreRestartButton" class="restartButton">Restart</button>
+                        </div>
+                        <h1>Core Exercises</h1>
+                        <div class="ex-names">
+                            <li>Plank</li>
+                            <li>Russian Twists</li>
+                            <li>Flutter Kicks</li>
+                            <li>Bicycle Crunches</li>
+                            <li>Superman</li>
+                        </div>      
+                        <div id="coreExercises" class="coreExercises">
+                            <div class="coreExercise">
+                                <h2>Plank</h2>
+                                <p class="ex-description">
+                                    Hold a push-up position with your body in a straight 
+                                    line from head to heels
+                                </p>
+                            </div>
+                            <div class="coreExercise">
+                                <h2>Russian Twists</h2>
+                                <p class="ex-description">Sit with knees bent, lean back slightly, 
+                                    and twist torso side to side</p>
+                            </div>
+                            <div class="coreExercise">
+                                <h2>Flutter Kicks</h2>
+                                <p class="ex-description">
+                                    Lie on back, legs lifted off the ground, and 
+                                    alternate kicking legs up and down
+                                </p>
+                            </div>
+                            <div class="coreExercise">
+                                <h2>Bicycle Crunches</h2>
+                                <p class="ex-description"> Lie on back, knees bent, and alternate
+                                    bringing opposite elbow towards opposite knee </p>
+                            </div>
+                            <div class="coreExercise">
+                                <h2>Superman</h2>
+                                <p class="ex-description">Lie face down, arms and legs extended off the ground,
+                                    engaging lower back and core muscles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BUTT -->
+                <div id="butt-ex" class="card" onclick="openPopup('butt-popup')">
+                    <div class="description">
+                        <h4>BUTT</h4>
+                        <p class="text-hidden">
+                            6 exercises<br>
+                            6 minutes
+                        </p>
+                    </div>
+                    <img src="images/girl.jpg" alt="girl">
+                </div>
+                <div class="popup" id="butt-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('butt-popup')">&times;</span>
+                        <div class="countdown">
+                            <p id="buttTimerText">00:00</p>
+                            <button id="buttStartStopButton" class="startStopButton">Start</button>
+                            <button id="buttRestartButton" class="restartButton">Restart</button>
+                        </div>
+                        <h1>Butt Exercises</h1>
+                        <div class="ex-names">
+                            <li>Squats</li>
+                            <li>Lunges</li>
+                            <li>Donkey Kicks</li>
+                            <li>Squat Pulses</li>
+                            <li>Wall Sits</li>
+                            <li>Fire Hydrants</li>
+                        </div>
+                        <div id="buttExercises" class="buttExercises">
+                            <div class="buttExercise">
+                                <h2>Squats</h2>
+                                <p class="ex-description">
+                                    Stand, bend knees, and push hips back, 
+                                    then return to standing.
+                                </p>
+                            </div>
+                            <div class="buttExercise">
+                                <h2>Lunges</h2>
+                                <p class="ex-description">
+                                    Step forward, bend knees, and push back up.
+                                </p>
+                            </div>
+                            <div class="buttExercise">
+                                <h2>Donkey Kicks</h2>
+                                <p class="ex-description">
+                                    On hands and knees, lift leg behind you, then lower.
+                                </p>
+                            </div>
+                            <div class="buttExercise">
+                                <h2>Squat Pulses</h2>
+                                <p class="ex-description"> 
+                                    Squat halfway down and pulse up and down slightly.
+                                </p>
+                            </div>
+                            <div class="buttExercise">
+                                <h2>Wall Sits</h2>
+                                <p class="ex-description">
+                                    Lean against a wall with knees bent
+                                </p>
+                            </div>
+                            <div class="buttExercise">
+                                <h2>Fire Hydrants</h2>
+                                <p class="ex-description">
+                                    On hands and knees, lift leg to side, then lower.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BACK -->
+                <div id="back-ex" class="card" onclick="openPopup('back-popup')">
+                    <div class="description">
+                        <h4>BACK</h4>
+                        <p class="text-hidden">
+                            6 exercises<br>
+                            6 minutes
+                        </p>
+                    </div>
+                    <img src="images/girl.jpg" alt="girl">
+                </div>
+                <div class="popup" id="back-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('back-popup')">&times;</span>
+                        <div class="countdown">
+                            <p id="backTimerText">00:00</p>
+                            <button id="backStartStopButton" class="startStopButton">Start</button>
+                            <button id="backRestartButton" class="restartButton">Restart</button>
+                        </div>
+                        <h1>back Exercises</h1>
+                        <div class="ex-names">
+                            <li>Superman</li>
+                            <li>Reverse Snow Angels</li>
+                            <li>Bird Dogs</li>
+                            <li>Cat-Cow Stretch</li>
+                            <li>Back Plank</li>
+                        </div>
+                        <div id="backExercises" class="backExercises">
+                            <div class="backExercise">
+                                <h2>Superman</h2>
+                                <p class="ex-description">
+                                    Lie face down, lift arms and legs off the ground, then lower.
+                                </p>
+                            </div>
+                            <div class="backExercise">
+                                <h2>Reverse Snow Angels</h2>
+                                <p class="ex-description">
+                                    Lie face down, lift arms and chest, then lower.
+                                </p>
+                            </div>
+                            <div class="backExercise">
+                                <h2>Bird Dogss</h2>
+                                <p class="ex-description">
+                                    On hands and knees, extend opposite arm and leg, then switch.
+                                </p>
+                            </div>
+                            <div class="backExercise">
+                                <h2>Cat-Cow Stretch</h2>
+                                <p class="ex-description"> 
+                                    n hands and knees, arch back up like a cat, then lower belly towards ground like a cow.
+                                </p>
+                            </div>
+                            <div class="backExercise">
+                                <h2>Back Plank</h2>
+                                <p class="ex-description">
+                                    Sit with legs extended, lift hips off ground, hold.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

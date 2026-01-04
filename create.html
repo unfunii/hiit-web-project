@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/next-art" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">HIIT</div>
+        <div class="buttons">
+            <button id="homeButton" class="btn">Home</button>
+            <button id="startButton" class="btn" >Start</button>
+            <button id="createButton" class="btn">Create</button>
+        </div>
+    </nav>
+    <section class="create-container">
+        <div>
+            <h1>Create your workout</h1>
+            <button id="createWorkOut" class="btn">+</button>
+        </div>
+        
+        <div id="workoutModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Select Workout</h2>
+                <input type="text" placeholder="Search workouts..." id="searchInput">
+                <div id="searchResults" class="search-results"></div>
+                <div id="workoutList" class="">
+                    <h3>Your workouts:</h3>
+                </div>
+                <div id="createExButton" class="createExButton">
+                    <button id="deleteAllButton" class="deleteAllButton">Delete All</button>
+                    <button id="startExButton" class="startExButton">Start</button>
+                </div>
+                <p id="chooseExMessage" style="display: none; color: rgb(12, 19, 59);">Choose exercises</p> <!-- Сообщение "Choose exercises" -->
+            </div>
+        </div>
+        <div id="yourEx-popup" class="popup">
+            <div class="popup-content">
+                <h1>Your exercises:</h1>
+                <span class="close-btn" onclick="closeYourExPopup('yourEx-popup')">&times;</span>
+                <div class="countdown">
+                    <p id="yourExTimerText">00:00</p>
+                    <button id="yourExStartStopButton" class="startStopButton">Start</button>
+                    <button id="yourExRestartButton" class="restartButton">Restart</button>
+                </div>
+                <div id="selectedExercisesContainer" class="selected-exercises-container"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
